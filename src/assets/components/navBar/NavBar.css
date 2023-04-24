@@ -1,3 +1,8 @@
+:root {
+  --primary: rgb(218, 206, 189);
+  --secondary: rgb(158, 150, 138);
+}
+
 /* .NavBar * {
   margin: 0px;
   padding: 0px;
@@ -12,10 +17,10 @@ button {
 .NavBar {
   position: sticky;
   top: 0px;
-  /* background-color: rgb(150, 150, 150); */
+  /* background-color: rgb(223, 20, 20); */
   color: rgb(255, 255, 255);
   width: 100%;
-  height: 85px;
+  height: 50px;
   margin: 0px;
 }
 
@@ -41,7 +46,7 @@ button {
 .NaviIntro {
   box-sizing: content-box;
   height: 50px;
-  background-color: rgb(200, 200, 200);
+  background-color: var(--primary);
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -78,10 +83,10 @@ button {
   overflow: hidden;
 }
 
-.navOpt:hover {
+/* .navOpt:hover {
   background-color: rgb(90, 120, 255);
-  color: rgb(240, 248, 255);
-}
+  color: rgb(240, 248, 255);  
+} */
 
 /* QUERY DESKTOP VIEW */
 @media screen and (min-width: 730px) {
@@ -112,23 +117,30 @@ button {
     font-size: large;
   }
 
-  .navOpt:hover {
-    background-color: #00000000;
-    text-shadow: -3px 3px 1px black;
-    transform: translate(3px, -3px);
-  }
-
-  .NavBar p {
-    color: rgb(255, 255, 255);
+  .NavBar a {
+    color: rgb(71, 94, 34);
     font-size: large;
+    transition: transform ease 0.3s, text-shadow ease 0.3s;
   }
 
-  .navOpt a p.active {
-    color: rgb(202, 79, 30);
+  .NavBar a:hover {
+    color: rgb(255, 255, 255);
+    background-color: #00000000;
+    color: white;
+    text-shadow: -3px 3px 3px black;
+    transform: translate(1px, -1px);
+    transition: all 0.3 ease-in-out;
   }
 
   .NavBar {
-    background-color: #21753a;
+    background-color: var(--primary);
     height: 70px;
+  }
+
+  a.active {
+    background: var(--secondary);
+    border-radius: 12px;
+    padding: 8px;
+    color: rgb(255, 255, 255);
   }
 }

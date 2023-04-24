@@ -37,19 +37,13 @@ function NavBar() {
       {!isMobile || visible ? (
         <ul>
           <li className="navOpt">
-            <NavLink to="/">
-              <p>Home</p>
-            </NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className="navOpt">
-            <NavLink to="/about">
-              <p>About</p>
-            </NavLink>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li className="navOpt">
-            <NavLink to="/contact">
-              <p>Contact</p>
-            </NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
       ) : (
