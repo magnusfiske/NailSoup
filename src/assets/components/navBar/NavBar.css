@@ -93,6 +93,10 @@ button {
   .Logotype {
     display: block;
   }
+@media screen and (min-width: 730px) {
+  .Logotype {
+    display: block;
+  }
 
   .NaviIntro {
     display: none;
